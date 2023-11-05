@@ -270,6 +270,14 @@ print("Recall:", recall)
 print("F1 Score:", f1)
 ```
 
+1/1 [==============================] - 0s 113ms/step - loss: 1.1542 - accuracy: 0.6800
+1/1 [==============================] - 0s 211ms/step
+* Accuracy: 0.68
+* Precision: 0.68
+* Recall: 1.0
+* F1 Score: 0.8095238095238095
+
+
 Successfully optained predictions from neural network model
 ```ruby
 new_data = pd.DataFrame({
@@ -310,6 +318,10 @@ else:
     print("Predicted Shadow: No Shadow")
 ```
 
+1/1 [==============================] - 0s 39ms/step
+Predicted Shadow: Full Shadow
+
+
 Demonstrating NO Shadow
 ```ruby
 threshold = 3
@@ -326,6 +338,10 @@ if predicted_labels[0]:
 else:
     print("Predicted Shadow: No Shadow")
 ```
+
+1/1 [==============================] - 0s 38ms/step
+Predicted Shadow: No Shadow
+
 
 # 5. Model Evaluation
 
