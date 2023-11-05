@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
+import joblib
 
 # Creating our app
 app = FastAPI()
@@ -9,6 +10,9 @@ app = FastAPI()
 origins = ["*"]
 methods = ["*"]
 headers = ["*"]
+
+#load my groundHog_model
+groundHog_model = joblib.load("groundHog_model.pkl") 
 
 app.add_middleware(
     CORSMiddleware,
@@ -21,7 +25,7 @@ app.add_middleware(
 # Implement default API endpoint
 @app.get("/")
 def read_root():
-    return {"message": "FastAPI setup successfully"}
+    return {"message": "FastAPI setup successful"}
 
 if __name__ == "__main__":
     import uvicorn
